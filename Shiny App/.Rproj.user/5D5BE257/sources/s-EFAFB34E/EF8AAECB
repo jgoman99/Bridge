@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1626245868123.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "EF8AAECB",
+    "lastKnownWriteTime" : 3546085676240760681,
+    "last_content_update" : 1626245868123,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "C85E9DF0",
+        "caption" : "wb_data(\"NY.GDP.PCAP.CD\", \"FRA\")",
+        "contentUrl" : "grid_resource/gridviewer.html?env=_rs_no_env&obj=&cache_key=C85E9DF0",
+        "displayedObservations" : 61,
+        "environment" : "_rs_no_env",
+        "expression" : "wb_data(\"NY.GDP.PCAP.CD\", \"FRA\")",
+        "object" : "",
+        "preview" : 0,
+        "totalObservations" : 61,
+        "variables" : 9
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

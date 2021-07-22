@@ -1,0 +1,70 @@
+#Helpful Links
+#https://r-spatial.org/r/2018/10/25/ggplot2-sf.html
+#https://bhaskarvk.github.io/user2017.geodataviz/notebooks/03-Interactive-Maps.nb.html
+
+#as.name may be useful
+
+# Imports
+library("ggplot2")
+library("sf")
+library("rnaturalearth")
+library("rnaturalearthdata")
+library(leaflet)
+library(widgetframe)
+library(sp)
+library(wbstats)
+library(dplyr)
+
+#In App we'll also add a search by area
+#wb_search(pattern = "education")
+
+# Checking Boxes
+title_string = "Generic Title"
+variable_string = "NY.GDP.MKTP.CD"
+current_year = 2016
+birth_year = 1975
+birth_iso3 = "USA"
+
+log_bool = FALSE
+
+# Importing Data
+# Variable Data
+data = wb_data(indicator = variable_string, start_date = current_year)
+birth_data = wb_data(indicator = variable_string, start_date = birth_year, country = birth_iso3)
+birth_value = birth_data[[variable_string]]
+
+# Operations on data for plotting
+data$is_higher = as.numeric(data[[variable_string]] >= birth_value)
+
+# Spatial Data
+spdf <- ne_countries(scale = "medium", returnclass = "sp")
+
+# Joining data
+spdf@data = left_join(spdf@data,data, by = c("iso_a3"="iso3c"))
+
+
+# NOTE: R is 32bit and can't natively handle integers above about 2.4 billion
+# log option
+# if (log_bool == TRUE)
+# {
+#   spdf@data[[variable_string]] = log(spdf@data[[variable_string]])
+# }
+
+
+# Graphing
+
+qpal <- colorBin(rev(viridis::viridis(2)),
+                      spdf@data[["is_higher"]], bins=2)
+
+# work around
+labels <- c("Lower","Higher","NA")
+
+l <- leaflet(spdf, options =
+               leafletOptions(attributionControl = FALSE, minzoom=1.5)) %>%
+  addPolygons(
+    label=~stringr::str_c(
+      name, ' ',
+      formatC(spdf@data[[variable_string]], big.mark = ',', format='f'))
+  )
+
+l

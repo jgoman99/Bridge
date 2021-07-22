@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1626021770728.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2323850534",
+    "id" : "4546E757",
+    "lastKnownWriteTime" : 1626997892,
+    "last_content_update" : 1626997892672,
+    "path" : "C:/Users/jgfri/OneDrive/Desktop/Regent/Bridge/Shiny App/app.R",
+    "project_path" : "app.R",
+    "properties" : {
+        "cursorPosition" : "51,82",
+        "scrollLine" : "40"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

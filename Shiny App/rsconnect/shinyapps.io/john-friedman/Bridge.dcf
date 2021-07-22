@@ -1,0 +1,13 @@
+name: Bridge
+title: Bridge
+username:
+account: john-friedman
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 1093876
+bundleId: 4847393
+url: https://john-friedman.shinyapps.io/Bridge/
+when: 1626997904.29054
+lastSyncTime: 1626997904.29054
+asMultiple: FALSE
+asStatic: FALSE
