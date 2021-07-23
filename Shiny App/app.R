@@ -263,7 +263,7 @@ server <- function(input, output) {
         # fix tooltip, change legends to years
         # Graph
         l <- leaflet(spdf, options =
-                         leafletOptions(attributionControl = FALSE, minzoom=1)) %>%
+                         leafletOptions(attributionControl = FALSE, minzoom=1)) %>% setView(0,0,1) %>%
             addPolygons(
                 label=~stringr::str_c(
                     name, ' ',
@@ -285,7 +285,7 @@ server <- function(input, output) {
         
         
         l2 <- leaflet(spdf, options =
-                         leafletOptions(attributionControl = FALSE, minzoom=1)) %>%
+                         leafletOptions(attributionControl = FALSE, minzoom=1)) %>% setView(0,0,1)  %>%
             addPolygons(
                 label=~stringr::str_c(
                     name, ' ',

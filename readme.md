@@ -1,6 +1,3 @@
-### Bridge: A resource to compare progress in living standards
+### Bridge: A quick Shiny App to compare living standards
+https://john-friedman.shinyapps.io/Bridge/
 (Inspired by Hans Rosling)
-
-##### Pre-set #1
-1) Child Mortality in Birth Year
-2
